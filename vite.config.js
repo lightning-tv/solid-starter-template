@@ -6,7 +6,7 @@ import legacy from "@vitejs/plugin-legacy";
 export default defineConfig({
   plugins: [importChunkUrl(), solidPlugin({
     solid: {
-      moduleName: "@lightningjs/solid",
+      moduleName: "@lightningtv/solid",
       generate: 'universal',
     },
   }),
@@ -19,16 +19,7 @@ export default defineConfig({
     alias: {
       theme: '@lightningjs/l3-ui-theme-base',
     },
-    dedupe: ['solid-js', '@lightningjs/solid', '@lightningjs/solid-primitives', '@lightningjs/renderer'],
-  },
-  optimizeDeps: {
-    include: [],
-    exclude: [
-    '@lightningjs/solid',
-    '@lightningjs/solid-primitives',
-    '@lightningjs/solid-ui',
-    '@lightningjs/renderer/core',
-    '@lightningjs/renderer/workers/renderer']
+    dedupe: ['solid-js', '@lightningtv/solid', '@lightningjs/solid-primitives', '@lightningjs/renderer'],
   },
   server: {
     hmr: true,

@@ -1,6 +1,5 @@
 import { useNavigate } from "@solidjs/router";
-import { View } from "@lightningjs/solid";
-import { useFocusManager, useAnnouncer } from "@lightningjs/solid-primitives";
+import { View, useFocusManager, useAnnouncer } from "@lightningtv/solid";
 
 const App = (props) => {
   useFocusManager({

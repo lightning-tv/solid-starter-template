@@ -1,4 +1,4 @@
-import { Text } from '@lightningjs/solid';
+import { Text } from '@lightningtv/solid';
 import styles from '../styles';
 
 const HelloWorld = () => {
