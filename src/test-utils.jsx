@@ -1,13 +1,11 @@
-﻿import { render as solidRender, Canvas } from '@lightningtv/solid';
+﻿import { render as solidRender, Config } from '@lightningtv/solid';
 
-const RenderOptions = {
+Config.rendererOptions = {
   rootId: document.createElement('div')
 };
 
 export function render(Component) {
   return solidRender(() => (
-    <Canvas options={RenderOptions}>
-      <Component />
-    </Canvas>
+    <Component />
   ));
 }
