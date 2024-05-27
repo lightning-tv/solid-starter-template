@@ -8,7 +8,7 @@ import NotFound from './pages/NotFound';
 
 import coreExtensionModuleUrl from './AppCoreExtensions.js?importChunkUrl';
 
-Config.debug = true;
+Config.debug = false;
 Config.fontSettings.fontFamily = 'Ubuntu';
 Config.fontSettings.color = 0xffffffff;
 Config.rendererOptions = {

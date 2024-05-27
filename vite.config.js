@@ -18,8 +18,10 @@ export default defineConfig({
   resolve: {
     alias: {
       theme: '@lightningjs/l3-ui-theme-base',
+      "@lightningjs/solid": '@lightningtv/solid',
+      "@lightningjs/solid-primitives": '@lightningtv/solid',
     },
-    dedupe: ['solid-js', '@lightningtv/solid', '@lightningjs/solid-primitives', '@lightningjs/renderer'],
+    dedupe: ['solid-js', '@lightningtv/solid', '@lightningjs/renderer'],
   },
   server: {
     hmr: true,
