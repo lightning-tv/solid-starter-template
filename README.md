@@ -8,4 +8,3 @@
 > npm i # or yarn or pnpm
 > npm start # or yarn or pnpm
 ```
-

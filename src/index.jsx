@@ -1,15 +1,15 @@
-import { render, Config } from '@lightningtv/solid';
+import { render, Config } from "@lightningtv/solid";
 import { HashRouter, Route } from "@solidjs/router";
-import App from './pages/App';
-import HelloWorld from './pages/HelloWorld';
-import TextPage from './pages/Text';
-import ButtonsPage from './pages/ButtonsPage';
-import NotFound from './pages/NotFound';
+import App from "./pages/App";
+import HelloWorld from "./pages/HelloWorld";
+import TextPage from "./pages/Text";
+import ButtonsPage from "./pages/ButtonsPage";
+import NotFound from "./pages/NotFound";
 
-import coreExtensionModuleUrl from './AppCoreExtensions.js?importChunkUrl';
+import coreExtensionModuleUrl from "./AppCoreExtensions.js?importChunkUrl";
 
 Config.debug = false;
-Config.fontSettings.fontFamily = 'Ubuntu';
+Config.fontSettings.fontFamily = "Ubuntu";
 Config.fontSettings.color = 0xffffffff;
 Config.rendererOptions = {
   coreExtensionModule: coreExtensionModuleUrl,
@@ -22,7 +22,7 @@ Config.rendererOptions = {
   boundsMargin: 20,
 };
 
-render(() =>  (
+render(() => (
   <HashRouter root={App}>
     <Route path="/" component={HelloWorld} />
     <Route path="/text" component={TextPage} />

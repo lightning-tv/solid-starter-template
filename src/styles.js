@@ -1,28 +1,37 @@
 export default {
   Page: {
-    width: 1920, height: 1080
+    width: 1920,
+    height: 1080,
   },
   headlineText: {
-    width: 1920, height: 170, lineHeight: 170, y: 455, contain: 'both',
+    width: 1920,
+    height: 170,
+    lineHeight: 170,
+    y: 455,
+    contain: "both",
     fontSize: 100,
-    textAlign: 'center'
+    textAlign: "center",
   },
   headlineSubText: {
-    width: 1920, height: 170, lineHeight: 170, y: 655, contain: 'both',
+    width: 1920,
+    height: 170,
+    lineHeight: 170,
+    y: 655,
+    contain: "both",
     fontSize: 60,
-    textAlign: 'center'
+    textAlign: "center",
   },
   Row: {
-    display: 'flex',
-    justifyContent: 'spaceBetween',
+    display: "flex",
+    justifyContent: "spaceBetween",
     width: 1760,
     height: 300,
     gap: 26,
   },
   Column: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'flexStart',
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flexStart",
     width: 1760,
     height: 500,
     gap: 50,

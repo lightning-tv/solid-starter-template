@@ -1,4 +1,4 @@
-import { View, Text } from '@lightningtv/solid';
+import { View, Text } from "@lightningtv/solid";
 
 /**
  * Primary UI component for user interaction
@@ -20,32 +20,32 @@ const styles = {
       alpha: 1,
     },
     active: {
-      color: 0x33ff55ff
+      color: 0x33ff55ff,
     },
     disabled: {
       alpha: 1,
     },
-    transition: { 
-      color: { duration: 0.3 }, 
+    transition: {
+      color: { duration: 0.3 },
       scale: { duration: 0.3 },
-      alpha: {duration: 1500, delay: 200, timing: "easy-in"}
-    }
-  }
+      alpha: { duration: 1500, delay: 200, timing: "easy-in" },
+    },
+  },
 };
 
 styles.text = {
   fontSize: 32,
   lineHeight: styles.container.height,
-  contain: 'width',
-  textAlign: 'center',
+  contain: "width",
+  textAlign: "center",
   mountY: -0.35,
-  color: 0xF6F6F9ff,
+  color: 0xf6f6f9ff,
   height: styles.container.height,
   width: styles.container.width,
   focus: {
-    fontSize: 64
-  }
-}
+    fontSize: 64,
+  },
+};
 
 export default function Button(props) {
   return (
