@@ -7,9 +7,7 @@ const HelloWorld = () => {
       <Text autofocus style={styles.headlineText}>
         Hello World!
       </Text>
-      <Text style={styles.headlineSubText}>
-        Press B for buttons, T for Text pages, M for here
-      </Text>
+      <Text style={styles.headlineSubText}>T for Text pages, M for here</Text>
     </>
   );
 };

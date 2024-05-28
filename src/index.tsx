@@ -3,7 +3,6 @@ import { HashRouter, Route } from "@solidjs/router";
 import App from "./pages/App";
 import HelloWorld from "./pages/HelloWorld";
 import TextPage from "./pages/Text";
-import ButtonsPage from "./pages/ButtonsPage";
 import NotFound from "./pages/NotFound";
 
 import coreExtensionModuleUrl from "./AppCoreExtensions.js?importChunkUrl";
@@ -26,7 +25,6 @@ render(() => (
   <HashRouter root={App}>
     <Route path="/" component={HelloWorld} />
     <Route path="/text" component={TextPage} />
-    <Route path="/buttons" component={ButtonsPage} />
     <Route path="/*all" component={NotFound} />
   </HashRouter>
 ));

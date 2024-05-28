@@ -1,12 +1,33 @@
 import { useNavigate } from "@solidjs/router";
-import { View, useFocusManager, useAnnouncer } from "@lightningtv/solid";
+import {
+  View,
+  useFocusManager,
+  useAnnouncer,
+  type KeyMap,
+  ElementNode,
+} from "@lightningtv/solid";
+
+declare module "@lightningtv/solid" {
+  interface KeyMap {
+    Announcer: string | number | (string | number)[];
+    Menu: string | number | (string | number)[];
+    Text: string | number | (string | number)[];
+    Escape: string | number | (string | number)[];
+    Backspace: string | number | (string | number)[];
+  }
+}
+
+declare global {
+  interface Window {
+    APP: ElementNode;
+  }
+}
 
 const App = (props) => {
   useFocusManager({
     Announcer: ["a"],
     Menu: ["m"],
     Text: "t",
-    Buttons: "b",
     Escape: ["Escape", 27],
     Backspace: ["Backspace", 8],
     Left: ["ArrowLeft", 37],
@@ -27,7 +48,6 @@ const App = (props) => {
       onAnnouncer={() => (announcer.enabled = !announcer.enabled)}
       onLast={() => history.back()}
       onText={() => navigate("/text")}
-      onButtons={() => navigate("/buttons")}
       onMenu={() => navigate("/")}
     >
       <View color={0x071423ff} />

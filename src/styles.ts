@@ -38,4 +38,4 @@ export default {
     y: 200,
     x: 80,
   },
-};
+} as const;

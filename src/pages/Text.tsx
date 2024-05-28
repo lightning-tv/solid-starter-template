@@ -10,7 +10,7 @@ const TextPage = () => {
     display: "flex",
     flexDirection: "column",
     justifyContent: "flexStart",
-  };
+  } as const;
 
   const SublineContainer = {
     width: 900,
@@ -19,21 +19,21 @@ const TextPage = () => {
     display: "flex",
     flexDirection: "row",
     justifyContent: "flexStart",
-  };
+  } as const;
 
   const Title = {
     fontSize: 42,
-  };
+  } as const;
 
   const Overview = {
     width: OverviewContainer.width,
     fontSize: 26,
     contain: "width",
-  };
+  } as const;
 
   const Subline = {
     fontSize: 26,
-  };
+  } as const;
 
   return (
     <View autofocus style={OverviewContainer}>
