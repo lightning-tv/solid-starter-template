@@ -1,17 +1,16 @@
-import { render, Config } from "@lightningtv/solid";
+import { createRenderer, Config } from "@lightningtv/solid";
 import { HashRouter, Route } from "@solidjs/router";
 import App from "./pages/App";
 import HelloWorld from "./pages/HelloWorld";
 import TextPage from "./pages/Text";
 import NotFound from "./pages/NotFound";
 
-import coreExtensionModuleUrl from "./AppCoreExtensions.js?importChunkUrl";
+import { loadFonts } from "./loadFonts";
 
 Config.debug = false;
 Config.fontSettings.fontFamily = "Ubuntu";
 Config.fontSettings.color = 0xffffffff;
 Config.rendererOptions = {
-  coreExtensionModule: coreExtensionModuleUrl,
   numImageWorkers: 2,
   // Set the resolution based on window height
   // 720p = 0.666667, 1080p = 1, 1440p = 1.5, 2160p = 2
@@ -21,6 +20,8 @@ Config.rendererOptions = {
   boundsMargin: 20,
 };
 
+const { renderer, render } = createRenderer();
+loadFonts(renderer.stage);
 render(() => (
   <HashRouter root={App}>
     <Route path="/" component={HelloWorld} />
