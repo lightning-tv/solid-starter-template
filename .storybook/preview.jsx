@@ -1,5 +1,6 @@
-import { createRenderer, Config } from '@lightningjs/solid';
+import { createRenderer, Config } from '@lightningtv/solid';
 import { useFocusManager } from '@lightningtv/solid/primitives';
+import { loadFonts } from '../src/loadFonts';
 
 Config.rendererOptions = {
   rootId: 'storybook-root',
@@ -8,6 +9,9 @@ Config.rendererOptions = {
   // enableInspector: true
   // deviceLogicalPixelRatio: 1
 };
+
+Config.fontSettings.fontFamily = "Ubuntu";
+Config.fontSettings.color = 0xffffffff;
 
 let dispose;
 const preview = {

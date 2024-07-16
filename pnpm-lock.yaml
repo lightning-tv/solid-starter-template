@@ -19,6 +19,9 @@ importers:
       "@lightningtv/solid-ui":
         specifier: ^0.18.18
         version: 0.18.18(@lightningtv/solid@1.0.0(@lightningjs/renderer@1.0.0)(solid-js@1.8.18))(solid-js@1.8.18)
+      "@lightningtv/vite-hex-transform":
+        specifier: ^1.1.0
+        version: 1.1.0(@types/node@20.14.10)(terser@5.31.3)
       "@solidjs/router":
         specifier: ^0.14.1
         version: 0.14.1(solid-js@1.8.18)
@@ -1438,6 +1441,12 @@ packages:
     peerDependencies:
       "@lightningjs/renderer": ^1.0.0
       solid-js: "*"
+
+  "@lightningtv/vite-hex-transform@1.1.0":
+    resolution:
+      {
+        integrity: sha512-rz//Xessfta3rRISPSW5IpMySdQYlXDJ7N1sVNrQVnsT6Ns+z9LYnj5JAxoc1qCLqj56eLkUXLYQhdLjIwQGLg==,
+      }
 
   "@mdx-js/react@3.0.1":
     resolution:
@@ -6970,6 +6979,18 @@ snapshots:
       "@solid-primitives/mouse": 2.0.19(solid-js@1.8.18)
       "@solid-primitives/scheduled": 1.4.3(solid-js@1.8.18)
       solid-js: 1.8.18
+
+  "@lightningtv/vite-hex-transform@1.1.0(@types/node@20.14.10)(terser@5.31.3)":
+    dependencies:
+      vite: 5.3.4(@types/node@20.14.10)(terser@5.31.3)
+    transitivePeerDependencies:
+      - "@types/node"
+      - less
+      - lightningcss
+      - sass
+      - stylus
+      - sugarss
+      - terser
 
   "@mdx-js/react@3.0.1(@types/react@18.3.3)(react@18.3.1)":
     dependencies:

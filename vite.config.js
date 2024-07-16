@@ -1,11 +1,13 @@
 import { defineConfig } from "vite";
 import solidPlugin from "vite-plugin-solid";
-import { importChunkUrl } from "@lightningjs/vite-plugin-import-chunk-url";
+import hexColorTransform from "@lightningtv/vite-hex-transform";
 import legacy from "@vitejs/plugin-legacy";
 
 export default defineConfig({
   plugins: [
-    importChunkUrl(),
+    hexColorTransform({
+      include: ["src/**/*.{ts,tsx,js,jsx}"],
+    }),
     solidPlugin({
       solid: {
         moduleName: "@lightningtv/solid",

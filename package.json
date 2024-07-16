@@ -22,6 +22,7 @@
     "@lightningjs/renderer": "^1.0.0",
     "@lightningtv/solid": "^1.0.0",
     "@lightningtv/solid-ui": "^0.18.18",
+    "@lightningtv/vite-hex-transform": "^1.1.0",
     "@solidjs/router": "^0.14.1",
     "@storybook/test": "^8.2.4",
     "@vitejs/plugin-legacy": "^5.4.1",
