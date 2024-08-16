@@ -20,6 +20,7 @@
   "dependencies": {
     "@lightningjs/l3-ui-theme-base": "^0.3.3",
     "@lightningjs/renderer": "^1.0.1",
+    "@lightningtv/core": "^1.5.6",
     "@lightningtv/solid": "^1.6.5",
     "@lightningtv/solid-ui": "^0.23.0-rc1",
     "@lightningtv/vite-hex-transform": "^1.1.0",
@@ -27,6 +28,11 @@
     "@storybook/test": "^8.2.9",
     "@vitejs/plugin-legacy": "^5.4.2",
     "solid-js": "^1.8.21"
+  },
+  "pnpm": {
+    "overrides": {
+      "@lightningtv/core": "$@lightningtv/core"
+    }
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",

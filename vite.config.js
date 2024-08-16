@@ -22,10 +22,13 @@ export default defineConfig({
   resolve: {
     alias: {
       theme: "@lightningjs/l3-ui-theme-base",
-      "@lightningjs/solid": "@lightningtv/solid",
-      "@lightningjs/solid-primitives": "@lightningtv/solid",
     },
-    dedupe: ["solid-js", "@lightningtv/solid", "@lightningjs/renderer"],
+    dedupe: [
+      "solid-js",
+      "@lightningtv/solid",
+      "@lightningtv/core",
+      "@lightningjs/renderer",
+    ],
   },
   server: {
     hmr: true,

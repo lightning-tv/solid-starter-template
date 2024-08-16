@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  "@lightningtv/core": ^1.5.6
+
 importers:
   .:
     dependencies:
@@ -13,6 +16,9 @@ importers:
       "@lightningjs/renderer":
         specifier: ^1.0.1
         version: 1.0.1
+      "@lightningtv/core":
+        specifier: ^1.5.6
+        version: 1.5.6
       "@lightningtv/solid":
         specifier: ^1.6.5
         version: 1.6.5(solid-js@1.8.21)
@@ -1424,7 +1430,7 @@ packages:
         integrity: sha512-z/BJg49l3Kbw0U7OxqwgAcfW868/rNL4ug0aClf3yU0hTY419stIxjVNlbJ5EOSDwxOoK2ywqFrKrUbED/LU0g==,
       }
     peerDependencies:
-      "@lightningtv/core": ^1.5.2
+      "@lightningtv/core": ^1.5.6
       "@lightningtv/solid": ^1.6.2
       solid-js: "*"
 
