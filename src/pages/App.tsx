@@ -3,7 +3,7 @@ import { View, ElementNode } from "@lightningtv/solid";
 import {
   useFocusManager,
   useAnnouncer,
-  type KeyMap,
+  useMouse,
 } from "@lightningtv/solid/primitives";
 
 declare module "@lightningtv/solid/primitives" {
@@ -35,7 +35,7 @@ const App = (props) => {
     Down: ["ArrowDown", 40],
     Enter: ["Enter", 13],
   });
-
+  useMouse();
   const navigate = useNavigate();
   const announcer = useAnnouncer();
   announcer.debug = false;

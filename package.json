@@ -1,6 +1,6 @@
 {
   "name": "solid-app",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -19,42 +19,43 @@
   "license": "ISC",
   "dependencies": {
     "@lightningjs/l3-ui-theme-base": "^0.3.3",
-    "@lightningjs/renderer": "^1.0.1",
-    "@lightningtv/core": "^1.5.7",
-    "@lightningtv/solid": "^1.6.6",
-    "@lightningtv/solid-ui": "^0.23.0-rc1",
+    "@lightningjs/renderer": "^2.2.0",
+    "@lightningtv/core": "^2.1.6",
+    "@lightningtv/solid": "^2.1.2",
+    "@lightningtv/solid-ui": "^0.29.4",
     "@lightningtv/vite-hex-transform": "^1.1.0",
-    "@solidjs/router": "^0.14.3",
-    "@storybook/test": "^8.2.9",
+    "@solidjs/router": "^0.14.5",
+    "@storybook/test": "^8.3.3",
     "@vitejs/plugin-legacy": "^5.4.2",
-    "solid-js": "^1.8.21"
+    "solid-js": "^1.9.1"
   },
   "pnpm": {
     "overrides": {
-      "@lightningtv/core": "$@lightningtv/core"
+      "@lightningtv/core": "$@lightningtv/core",
+      "@lightningtv/solid": "$@lightningtv/solid",
+      "@lightningjs/renderer": "$@lightningjs/renderer"
     }
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^1.6.1",
-    "@lightningjs/vite-plugin-import-chunk-url": "^0.3.1",
-    "@storybook/addon-essentials": "^8.2.9",
-    "@storybook/addon-interactions": "^8.2.9",
-    "@storybook/addon-links": "^8.2.9",
-    "@storybook/blocks": "^8.2.9",
-    "@storybook/html": "^8.2.9",
-    "@storybook/html-vite": "^8.2.9",
-    "@vitest/browser": "^2.0.5",
-    "husky": "^9.1.4",
-    "jsdom": "^24.1.1",
-    "lint-staged": "^15.2.9",
-    "playwright": "^1.46.0",
+    "@chromatic-com/storybook": "^2.0.2",
+    "@storybook/addon-essentials": "^8.3.3",
+    "@storybook/addon-interactions": "^8.3.3",
+    "@storybook/addon-links": "^8.3.3",
+    "@storybook/blocks": "^8.3.3",
+    "@storybook/html": "^8.3.3",
+    "@storybook/html-vite": "^8.3.3",
+    "@vitest/browser": "^2.1.1",
+    "husky": "^9.1.6",
+    "jsdom": "^25.0.1",
+    "lint-staged": "^15.2.10",
+    "playwright": "^1.47.2",
     "prettier": "^3.3.3",
-    "storybook": "^8.2.9",
-    "vite": "^5.4.1",
+    "storybook": "^8.3.3",
+    "vite": "^5.4.8",
     "vite-bundle-visualizer": "^1.2.1",
     "vite-plugin-cross-origin-isolation": "^0.1.6",
     "vite-plugin-solid": "^2.10.2",
-    "vitest": "^2.0.5"
+    "vitest": "^2.1.1"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
