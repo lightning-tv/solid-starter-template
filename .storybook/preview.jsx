@@ -1,11 +1,11 @@
-import { createRenderer, Config } from '@lightningtv/solid';
-import { useFocusManager } from '@lightningtv/solid/primitives';
-import { loadFonts } from '../src/loadFonts';
+import { createRenderer, Config } from "@lightningtv/solid";
+import { useFocusManager } from "@lightningtv/solid/primitives";
+import { loadFonts } from "../src/loadFonts";
 
 Config.rendererOptions = {
-  rootId: 'storybook-root',
+  rootId: "storybook-root",
   appWidth: 800,
-  appHeight: 600,
+  appHeight: 600
   // enableInspector: true
   // deviceLogicalPixelRatio: 1
 };
@@ -19,15 +19,17 @@ const preview = {
     controls: {
       matchers: {
         color: /(background|color)$/i,
-        date: /Date$/,
-      },
-    },
+        date: /Date$/
+      }
+    }
   },
   decorators: [
     Story => {
-      const solidRoot = document.createElement('div');
+      const solidRoot = document.createElement("div");
       // teardown previous render (cleans up keyhandling)
-      dispose && dispose();
+      if (dispose) {
+        dispose();
+      }
 
       const { renderer, render } = createRenderer(undefined, solidRoot);
       loadFonts(renderer.stage);
