@@ -34,12 +34,12 @@ const styles = {
 };
 
 styles.text = {
-  fontFamily: "Ubuntu",
+  fontFamily: "Roboto",
   fontSize: 32,
   lineHeight: styles.container.height,
   contain: "width",
   textAlign: "center",
-  color: "#FFF",
+  color: "#000",
   height: styles.container.height,
   width: styles.container.width,
   focus: {

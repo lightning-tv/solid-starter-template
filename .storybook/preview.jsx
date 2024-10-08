@@ -1,13 +1,17 @@
-import { createRenderer, Config } from "@lightningtv/solid";
+import { createRenderer, Config, loadFonts } from "@lightningtv/solid";
 import { useFocusManager } from "@lightningtv/solid/primitives";
-import { loadFonts } from "../src/loadFonts";
+import { WebGlCoreRenderer, SdfTextRenderer } from "@lightningjs/renderer/webgl";
+import { Inspector } from "@lightningjs/renderer/inspector";
+import fonts from "../src/fonts";
 
 Config.rendererOptions = {
   rootId: "storybook-root",
   appWidth: 800,
-  appHeight: 600
-  // enableInspector: true
-  // deviceLogicalPixelRatio: 1
+  appHeight: 600,
+  fontEngines: [SdfTextRenderer],
+  renderEngine: WebGlCoreRenderer,
+  inspector: Inspector,
+  devicePhysicalPixelRatio: 1,
 };
 
 Config.fontSettings.fontFamily = "Ubuntu";
@@ -19,9 +23,9 @@ const preview = {
     controls: {
       matchers: {
         color: /(background|color)$/i,
-        date: /Date$/
-      }
-    }
+        date: /Date$/,
+      },
+    },
   },
   decorators: [
     Story => {
@@ -31,8 +35,8 @@ const preview = {
         dispose();
       }
 
-      const { renderer, render } = createRenderer(undefined, solidRoot);
-      loadFonts(renderer.stage);
+      const { render } = createRenderer(undefined, solidRoot);
+      loadFonts(fonts);
 
       dispose = render(() => {
         useFocusManager();
@@ -40,8 +44,8 @@ const preview = {
       });
 
       return solidRoot;
-    }
-  ]
+    },
+  ],
 };
 
 export default preview;
