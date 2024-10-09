@@ -1,9 +1,10 @@
-import { Text } from "@lightningtv/solid";
+import { Text, View } from "@lightningtv/solid";
 import styles from "../styles";
 
 const HelloWorld = () => {
   return (
     <>
+      <View src="assets/solid.svg" width={800} height={600} x={1920 / 2 - 400} y={1080 / 2 - 300} />
       <Text autofocus style={styles.headlineText}>
         Hello World!
       </Text>
