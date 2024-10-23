@@ -1,10 +1,8 @@
 import { createRenderer, Config, loadFonts } from "@lightningtv/solid";
-import {
-  WebGlCoreRenderer,
-  SdfTextRenderer,
-} from "@lightningjs/renderer/webgl";
+import { WebGlCoreRenderer, SdfTextRenderer } from "@lightningjs/renderer/webgl";
 import { Inspector } from "@lightningjs/renderer/inspector";
-import { HashRouter, Route } from "@solidjs/router";
+import { Route } from "@solidjs/router";
+import { HashRouter } from "@lightningtv/solid/primitives";
 import App from "./pages/App";
 import HelloWorld from "./pages/HelloWorld";
 import TextPage from "./pages/Text";

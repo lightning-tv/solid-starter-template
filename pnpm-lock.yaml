@@ -5,9 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  "@lightningtv/core": ^2.2.2
-  "@lightningtv/solid": ^2.2.2
-  "@lightningjs/renderer": ^2.3.2
+  "@lightningtv/core": ^2.3.2
+  "@lightningtv/solid": ^2.3.0
+  "@lightningjs/renderer": ^2.4.0
 
 importers:
   .:
@@ -19,14 +19,14 @@ importers:
         specifier: ^2.4.0
         version: 2.4.0
       "@lightningtv/core":
-        specifier: ^2.2.2
-        version: 2.2.2(@lightningjs/renderer@2.4.0)
+        specifier: ^2.3.2
+        version: 2.3.3(@lightningjs/renderer@2.4.0)
       "@lightningtv/solid":
-        specifier: ^2.2.1
-        version: 2.2.1(@lightningjs/renderer@2.4.0)(solid-js@1.9.2)
+        specifier: ^2.3.0
+        version: 2.3.0(@lightningjs/renderer@2.4.0)(@solidjs/router@0.14.9(solid-js@1.9.2))(solid-js@1.9.2)
       "@lightningtv/solid-ui":
-        specifier: ^0.30.0
-        version: 0.30.0(@lightningtv/core@2.2.2(@lightningjs/renderer@2.4.0))(@lightningtv/solid@2.2.1(@lightningjs/renderer@2.4.0)(solid-js@1.9.2))(solid-js@1.9.2)
+        specifier: ^0.30.2
+        version: 0.30.2(@lightningtv/core@2.3.3(@lightningjs/renderer@2.4.0))(@lightningtv/solid@2.3.0(@lightningjs/renderer@2.4.0)(@solidjs/router@0.14.9(solid-js@1.9.2))(solid-js@1.9.2))(solid-js@1.9.2)
       "@lightningtv/vite-hex-transform":
         specifier: ^1.1.0
         version: 1.1.0(@types/node@22.7.6)(terser@5.36.0)
@@ -1538,30 +1538,32 @@ packages:
       }
     engines: { node: ">= 20.9.0", npm: ">= 10.0.0", pnpm: ">= 8.9.2" }
 
-  "@lightningtv/core@2.2.2":
+  "@lightningtv/core@2.3.3":
     resolution:
       {
-        integrity: sha512-V4BeqhBPEphpZsEUFGPdHkhBiTTDK0vUFupSYIKQyTr6N+zSOFwNp0nvH2FWBKouVdrGRR9+szkk8DMAZ/YQvQ==,
+        integrity: sha512-RQH2U+9wSrFvweidJ1xqqLcFDgmOWf/mL5QA3UlLG8Qnl2tF1fQsK14j5oJwSCXwzx7bkaLHdkWM03C70Y6fIw==,
       }
     peerDependencies:
-      "@lightningjs/renderer": ^2.3.2
+      "@lightningjs/renderer": ^2.4.0
 
-  "@lightningtv/solid-ui@0.30.0":
+  "@lightningtv/solid-ui@0.30.2":
     resolution:
       {
-        integrity: sha512-rf4OFoLfa+pk8BMc7oG2n2EXyuHFk1qo3ZQLEDU7F8fzVjqPRTOBMNb9JibTVo6D0xE3BfPoRGwbVUYOIERqlw==,
+        integrity: sha512-lIhDCmsUwnNenFbek3yKD4jzzmYX7Sx7Tgf94h7QgrRMBCsaHtSfNGdjmQdHpwkiuXNwQHpxu9whdW37Cmh29Q==,
       }
     peerDependencies:
-      "@lightningtv/core": ^2.2.2
-      "@lightningtv/solid": ^2.2.2
+      "@lightningtv/core": ^2.3.2
+      "@lightningtv/solid": ^2.3.0
       solid-js: "*"
 
-  "@lightningtv/solid@2.2.1":
+  "@lightningtv/solid@2.3.0":
     resolution:
       {
-        integrity: sha512-T5sDJV328vSlxYFB3FQoxjKAMRMaIhPicr0hTPZtZxDyNKFoVBeYBBR+VdpTZabtHMvjFMttRvg4CfP3ruhrGQ==,
+        integrity: sha512-/5B4Euk/Ep1scgOHtrp5ST5EX5KB4zvOaM8LtbukMlH/d24MqhJ4W8d0ly4leMCueAGluQD2DTyClfkyX8fuuA==,
       }
     peerDependencies:
+      "@lightningjs/renderer": ^2.4.0
+      "@solidjs/router": ^0.14.10
       solid-js: "*"
 
   "@lightningtv/vite-hex-transform@1.1.0":
@@ -7210,27 +7212,27 @@ snapshots:
 
   "@lightningjs/renderer@2.4.0": {}
 
-  "@lightningtv/core@2.2.2(@lightningjs/renderer@2.4.0)":
+  "@lightningtv/core@2.3.3(@lightningjs/renderer@2.4.0)":
     dependencies:
       "@lightningjs/renderer": 2.4.0
 
-  "@lightningtv/solid-ui@0.30.0(@lightningtv/core@2.2.2(@lightningjs/renderer@2.4.0))(@lightningtv/solid@2.2.1(@lightningjs/renderer@2.4.0)(solid-js@1.9.2))(solid-js@1.9.2)":
+  "@lightningtv/solid-ui@0.30.2(@lightningtv/core@2.3.3(@lightningjs/renderer@2.4.0))(@lightningtv/solid@2.3.0(@lightningjs/renderer@2.4.0)(@solidjs/router@0.14.9(solid-js@1.9.2))(solid-js@1.9.2))(solid-js@1.9.2)":
     dependencies:
       "@lightningjs/renderer": 2.4.0
-      "@lightningtv/core": 2.2.2(@lightningjs/renderer@2.4.0)
-      "@lightningtv/solid": 2.2.1(@lightningjs/renderer@2.4.0)(solid-js@1.9.2)
+      "@lightningtv/core": 2.3.3(@lightningjs/renderer@2.4.0)
+      "@lightningtv/solid": 2.3.0(@lightningjs/renderer@2.4.0)(@solidjs/router@0.14.9(solid-js@1.9.2))(solid-js@1.9.2)
       "@solid-primitives/refs": 1.0.8(solid-js@1.9.2)
       solid-js: 1.9.2
 
-  "@lightningtv/solid@2.2.1(@lightningjs/renderer@2.4.0)(solid-js@1.9.2)":
+  "@lightningtv/solid@2.3.0(@lightningjs/renderer@2.4.0)(@solidjs/router@0.14.9(solid-js@1.9.2))(solid-js@1.9.2)":
     dependencies:
-      "@lightningtv/core": 2.2.2(@lightningjs/renderer@2.4.0)
+      "@lightningjs/renderer": 2.4.0
+      "@lightningtv/core": 2.3.3(@lightningjs/renderer@2.4.0)
       "@solid-primitives/event-listener": 2.3.3(solid-js@1.9.2)
       "@solid-primitives/mouse": 2.0.20(solid-js@1.9.2)
       "@solid-primitives/scheduled": 1.4.3(solid-js@1.9.2)
+      "@solidjs/router": 0.14.9(solid-js@1.9.2)
       solid-js: 1.9.2
-    transitivePeerDependencies:
-      - "@lightningjs/renderer"
 
   "@lightningtv/vite-hex-transform@1.1.0(@types/node@22.7.6)(terser@5.36.0)":
     dependencies:
