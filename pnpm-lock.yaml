@@ -30,6 +30,9 @@ importers:
       "@lightningtv/vite-hex-transform":
         specifier: ^1.1.0
         version: 1.1.0(@types/node@22.9.0)(terser@5.36.0)
+      "@solid-primitives/i18n":
+        specifier: ^2.1.1
+        version: 2.1.1(solid-js@1.9.3)
       "@solidjs/router":
         specifier: ^0.15.1
         version: 0.15.1(solid-js@1.9.3)
@@ -1788,6 +1791,14 @@ packages:
     resolution:
       {
         integrity: sha512-DAJbl+F0wrFW2xmcV8dKMBhk9QLVLuBSW+TR4JmIfTaObxd13PuL7nqaXnaYKDWOYa6otB00qcCUIGbuIhSUgQ==,
+      }
+    peerDependencies:
+      solid-js: ^1.6.12
+
+  "@solid-primitives/i18n@2.1.1":
+    resolution:
+      {
+        integrity: sha512-1p9B8hveu+gzFRWfXcRtdzzEdr7gw3c8uLXm+2bU33JHgiI8kYJsWvG128sE6vU1ZtYGPrGq980Jd6hxYupyZQ==,
       }
     peerDependencies:
       solid-js: ^1.6.12
@@ -6687,6 +6698,10 @@ snapshots:
   "@solid-primitives/event-listener@2.3.3(solid-js@1.9.3)":
     dependencies:
       "@solid-primitives/utils": 6.2.3(solid-js@1.9.3)
+      solid-js: 1.9.3
+
+  "@solid-primitives/i18n@2.1.1(solid-js@1.9.3)":
+    dependencies:
       solid-js: 1.9.3
 
   "@solid-primitives/mouse@2.0.20(solid-js@1.9.3)":

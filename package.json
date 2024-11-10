@@ -27,6 +27,7 @@
     "@lightningtv/solid": "^2.5.0",
     "@lightningtv/solid-ui": "^0.31.2",
     "@lightningtv/vite-hex-transform": "^1.1.0",
+    "@solid-primitives/i18n": "^2.1.1",
     "@solidjs/router": "^0.15.1",
     "@storybook/test": "^8.4.2",
     "@vitejs/plugin-legacy": "^5.4.3",
