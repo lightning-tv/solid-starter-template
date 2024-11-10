@@ -8,15 +8,20 @@ const styles = {
   container: {
     width: 386,
     height: 136,
-    color: 0x000000ff,
-    alpha: 0.3,
-    borderRadius: 30,
-    border: { width: 5, color: 0xcc33ffff },
+    color: "#FFF",
+    alpha: 0.9,
+    effects: {
+      radius: { radius: 8 },
+      border: { width: 5, color: "#000" },
+    },
     scale: 1,
     focus: {
       color: 0x58807dff,
       scale: 1.2,
-      border: { width: 5, color: 0xff0000ff },
+      effects: {
+        radius: { radius: 8 },
+        border: { width: 5, color: 0xff0000ff },
+      },
       alpha: 1,
     },
     active: {

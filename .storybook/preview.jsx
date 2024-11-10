@@ -1,47 +1,63 @@
 import { createRenderer, Config, loadFonts } from "@lightningtv/solid";
-import { useFocusManager } from "@lightningtv/solid/primitives";
 import { WebGlCoreRenderer, SdfTextRenderer } from "@lightningjs/renderer/webgl";
 import { Inspector } from "@lightningjs/renderer/inspector";
 import fonts from "../src/fonts";
+import { themes } from "@storybook/theming";
+import { useFocusManager } from "@lightningtv/solid/primitives";
+import { createSignal, Show } from "solid-js";
 
 Config.rendererOptions = {
-  rootId: "storybook-root",
-  appWidth: 800,
-  appHeight: 600,
-  fontEngines: [SdfTextRenderer],
-  renderEngine: WebGlCoreRenderer,
+  appWidth: 1280,
+  appHeight: 720,
+  deviceLogicalPixelRatio: 2 / 3,
   inspector: Inspector,
   devicePhysicalPixelRatio: 1,
+  fontEngines: [SdfTextRenderer],
+  renderEngine: WebGlCoreRenderer,
 };
 
-Config.fontSettings.fontFamily = "Ubuntu";
-Config.fontSettings.color = 0xffffffff;
+Config.fontSettings.fontFamily = "Roboto";
 
-let dispose;
+let startRenderer = true;
+const solidRoot = document.createElement("div");
+let toRender, setToRender;
+
 const preview = {
+  tags: ["autodocs"],
   parameters: {
+    backgrounds: { default: "dark" },
+    actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/,
+      expanded: true,
+    },
+    docs: {
+      theme: themes.dark,
+      story: {
+        inline: false,
+        iframeHeight: "360px",
+      },
+      source: {
+        type: "code",
+        language: "tsx",
       },
     },
   },
   decorators: [
-    Story => {
-      const solidRoot = document.createElement("div");
-      // teardown previous render (cleans up keyhandling)
-      if (dispose) {
-        dispose();
+    (Story, context) => {
+      if (setToRender) {
+        setToRender(Story);
       }
+      if (startRenderer) {
+        startRenderer = false;
+        const { render } = createRenderer(undefined, solidRoot);
+        loadFonts(fonts);
 
-      const { render } = createRenderer(undefined, solidRoot);
-      loadFonts(fonts);
-
-      dispose = render(() => {
-        useFocusManager();
-        return <Story />;
-      });
+        render(() => {
+          useFocusManager();
+          [toRender, setToRender] = createSignal(Story);
+          return <Show when={toRender()}>{toRender()}</Show>;
+        });
+      }
 
       return solidRoot;
     },

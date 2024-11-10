@@ -13,7 +13,7 @@ Config.debug = false;
 Config.fontSettings.fontFamily = "Roboto";
 Config.fontSettings.color = 0xffffffff;
 Config.rendererOptions = {
-  numImageWorkers: 2,
+  numImageWorkers: window.navigator.hardwareConcurrency || 2,
   fontEngines: [SdfTextRenderer],
   renderEngine: WebGlCoreRenderer,
   inspector: Inspector,
