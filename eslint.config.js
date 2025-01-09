@@ -4,10 +4,10 @@ import tseslint from "typescript-eslint";
 
 export default [
   {
-    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"]
+    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
   },
   {
-    languageOptions: { globals: globals.browser }
+    languageOptions: { globals: globals.browser },
   },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
@@ -16,9 +16,15 @@ export default [
       "comma-dangle": ["error", "always-multiline"],
       quotes: ["error", "double", { avoidEscape: true }],
       semi: ["error", "always"],
-      "no-unused-vars": ["warn"],
+      "no-unused-vars": [
+        "warn",
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+        },
+      ],
       "@typescript-eslint/no-explicit-any": "off",
-      "func-call-spacing": ["error", "never"]
-    }
-  }
+      "func-call-spacing": ["error", "never"],
+    },
+  },
 ];

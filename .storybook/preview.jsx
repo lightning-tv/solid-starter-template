@@ -26,7 +26,6 @@ const preview = {
   tags: ["autodocs"],
   parameters: {
     backgrounds: { default: "dark" },
-    actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       expanded: true,
     },
@@ -43,7 +42,7 @@ const preview = {
     },
   },
   decorators: [
-    (Story, context) => {
+    (Story, _context) => {
       if (setToRender) {
         setToRender(Story);
       }
