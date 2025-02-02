@@ -12,8 +12,17 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   {
+    env: {
+      node: true,
+      commonjs: true,
+    },
     rules: {
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        { vars: "local", args: "after-used", varsIgnorePattern: "(^_|Ref$)", argsIgnorePattern: "^_" },
+      ],
       "comma-dangle": ["error", "always-multiline"],
+      "no-process-env": "off", // disallow use of process.env
       quotes: ["error", "double", { avoidEscape: true }],
       semi: ["error", "always"],
       "no-unused-vars": [
