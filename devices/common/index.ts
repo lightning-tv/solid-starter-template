@@ -16,7 +16,7 @@ export const config = {
   lightning: {
     debug: false,
     focusDebug: false,
-    fontSettings: { fontFamily: "Roboto", color: "#FFF" },
+    fontSettings: { fontFamily: "Roboto", color: 0xffffffff, fontSize: 40 },
     animationSettings: { easing: "ease-in-out", duration: 250 },
     rendererOptions: {
       appHeight: 1080,
@@ -42,6 +42,7 @@ export const config = {
     Enter: ["Enter", 13],
     Play: ["p", 80],
     Pause: ["a", 65],
+    Menu: ["m"],
     PlayPause: ["t", 84],
     FastForward: ["f", 70],
     FastForward10: ["d", 68],
