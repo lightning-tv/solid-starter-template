@@ -31,6 +31,7 @@ export const config = {
       devicePhysicalPixelRatio: 1,
       // Increase to preload images coming from offscreen
       boundsMargin: 20,
+      createImageBitmapSupport: "auto",
     },
   },
   keys: {
