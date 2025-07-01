@@ -2,6 +2,8 @@
 
 Part of https://lightningtv.dev/
 
+Check out https://github.com/lightning-tv/solid for additional support.
+
 ## Quick Start
 
 ```sh

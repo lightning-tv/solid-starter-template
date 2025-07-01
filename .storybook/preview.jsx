@@ -7,8 +7,8 @@ import { useFocusManager } from "@lightningtv/solid/primitives";
 import { createSignal, Show } from "solid-js";
 
 Config.rendererOptions = {
-  appWidth: 1280,
-  appHeight: 720,
+  appWidth: 1920,
+  appHeight: 1080,
   deviceLogicalPixelRatio: 2 / 3,
   inspector: Inspector,
   devicePhysicalPixelRatio: 1,
@@ -26,6 +26,7 @@ const preview = {
   tags: ["autodocs"],
   parameters: {
     backgrounds: { default: "dark" },
+    actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       expanded: true,
     },
@@ -37,7 +38,7 @@ const preview = {
       },
       source: {
         type: "code",
-        language: "tsx",
+        language: "jsx",
       },
     },
   },
@@ -46,6 +47,7 @@ const preview = {
       if (setToRender) {
         setToRender(Story);
       }
+
       if (startRenderer) {
         startRenderer = false;
         const { render } = createRenderer(undefined, solidRoot);
