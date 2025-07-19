@@ -1,7 +1,7 @@
 import { mergeConfig } from "vite";
 
 export default {
-  framework: "@kachurun/storybook-solid-vite",
+  framework: "storybook-solidjs-vite",
   addons: [
     "@storybook/addon-onboarding",
     "@storybook/addon-docs",

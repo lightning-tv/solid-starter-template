@@ -2,7 +2,6 @@ import { createRenderer, Config, loadFonts } from "@lightningtv/solid";
 import { WebGlCoreRenderer, SdfTextRenderer } from "@lightningjs/renderer/webgl";
 import { Inspector } from "@lightningjs/renderer/inspector";
 import fonts from "../src/fonts";
-import { themes } from "@storybook/theming";
 import { useFocusManager } from "@lightningtv/solid/primitives";
 import { createSignal, Show } from "solid-js";
 
@@ -31,7 +30,6 @@ const preview = {
       expanded: true,
     },
     docs: {
-      theme: themes.dark,
       story: {
         inline: false,
         iframeHeight: "360px",
