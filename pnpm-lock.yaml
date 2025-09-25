@@ -8,14 +8,14 @@ importers:
   .:
     dependencies:
       "@lightningjs/renderer":
-        specifier: 2.16.0
-        version: 2.16.0
+        specifier: 2.17.0
+        version: 2.17.0
       "@lightningtv/core":
-        specifier: ^2.10.0
-        version: 2.10.0(@lightningjs/renderer@2.16.0)
+        specifier: ^2.12.2
+        version: 2.12.2(@lightningjs/renderer@2.17.0)
       "@lightningtv/solid":
-        specifier: ^2.9.4
-        version: 2.9.4(@lightningjs/renderer@2.16.0)(@solidjs/router@0.15.3(solid-js@1.9.7))(solid-js@1.9.7)
+        specifier: ^2.10.13
+        version: 2.10.13(@lightningjs/renderer@2.17.0)(@solidjs/router@0.15.3(solid-js@1.9.7))(solid-js@1.9.7)
       "@lightningtv/vite-hex-transform":
         specifier: ^1.1.0
         version: 1.1.0(terser@5.43.1)
@@ -1578,25 +1578,25 @@ packages:
         integrity: sha512-uw6guiW/gcAGPDhLmd77/6lW8QLeiV5RUTsAX46Db6oLhGaVj4lhnPwb184s1bkc8kdVg/+h988dro8GRDpmYQ==,
       }
 
-  "@lightningjs/renderer@2.16.0":
+  "@lightningjs/renderer@2.17.0":
     resolution:
       {
-        integrity: sha512-TA0litV7/ZMgRjc54GvXavzjBJFSZ8T3z7ohel4dqE3Tw9N3hC3aBmkey6PpF4usQ8JemNBMNgj7/2gR7bINhw==,
+        integrity: sha512-WZ60yOUhqNGPXEpNmZH+9go6QrZeaOl2f/zfwNes/Ank71QwAqU3DaHU2eYBauv34j1hcOVvK0R8lPtriYKHFA==,
       }
     engines: { node: ">= 20.9.0", npm: ">= 10.0.0", pnpm: ">= 8.9.2" }
 
-  "@lightningtv/core@2.10.0":
+  "@lightningtv/core@2.12.2":
     resolution:
       {
-        integrity: sha512-X+ua2IAvs8UJrV0tuBtc3aZG2zqAsFFBmCzWMcg9XT1VUruFanyeCW7oobAkevW2jkFmIIqjlG980FKOr2/rEg==,
+        integrity: sha512-yYwh05Ck8TKr6fNvEtGeAoz2ocZHFiF3jrF6FmyRa/jcrFPn0NHBZSUinHFSaeI3Mkgofe92EqLNJLEcS3+6kg==,
       }
     peerDependencies:
-      "@lightningjs/renderer": ^2.15.0
+      "@lightningjs/renderer": ^2.16.0
 
-  "@lightningtv/solid@2.9.4":
+  "@lightningtv/solid@2.10.13":
     resolution:
       {
-        integrity: sha512-P/0nkkcBY5ODkvw3eMG318sDbXIDX+GTNZ+9Nnq19IExHCFKli7czZMuHpyzmvrMxUZL6NfeLQMEqDFqhvFv6w==,
+        integrity: sha512-aJSwBLeABNp2Nbk8Jjzgox+DcpDj3x/sQn6BqMZSh7CkLa/KosDZBOMf8yZ5EO+uBkjOgJxU3tLxYFJQolw2Sg==,
       }
     peerDependencies:
       "@solidjs/router": ^0.15.1
@@ -1867,6 +1867,22 @@ packages:
     resolution:
       {
         integrity: sha512-9dQHTTgLBqyAI7aavtO+HnpTVJgWQA1ghBSrmLtMu1SMxLPDuLfuNr+Tk5udb4AL4Ojg7h9JrKOGEEDqsJXWJA==,
+      }
+    peerDependencies:
+      solid-js: ^1.6.12
+
+  "@solid-primitives/keyed@1.5.2":
+    resolution:
+      {
+        integrity: sha512-BgoEdqPw48URnI+L5sZIHdF4ua4Las1eWEBBPaoSFs42kkhnHue+rwCBPL2Z9ebOyQ75sUhUfOETdJfmv0D6Kg==,
+      }
+    peerDependencies:
+      solid-js: ^1.6.12
+
+  "@solid-primitives/list@0.1.2":
+    resolution:
+      {
+        integrity: sha512-gAnGUgXN9as0TBr2QAwLqWAbEo0ALqx2VI+lr7B2r8o3QFaFxiz7dw/qOx50Ko7TGcrYxgsYiwc9OYaS+eY89w==,
       }
     peerDependencies:
       solid-js: ^1.6.12
@@ -4693,7 +4709,6 @@ packages:
       {
         integrity: sha512-jelbBSNroFS2FMxUUYu319ouldPErY5JZ7Islsc/xMzeUtK0/BerANjBWPJvSdsUVcwkqcVpgDSW/YTgT9CtDg==,
       }
-    engines: { node: ">=18" }
 
   shebang-command@2.0.0:
     resolution:
@@ -6532,16 +6547,18 @@ snapshots:
       "@jridgewell/resolve-uri": 3.1.2
       "@jridgewell/sourcemap-codec": 1.5.4
 
-  "@lightningjs/renderer@2.16.0": {}
+  "@lightningjs/renderer@2.17.0": {}
 
-  "@lightningtv/core@2.10.0(@lightningjs/renderer@2.16.0)":
+  "@lightningtv/core@2.12.2(@lightningjs/renderer@2.17.0)":
     dependencies:
-      "@lightningjs/renderer": 2.16.0
+      "@lightningjs/renderer": 2.17.0
 
-  "@lightningtv/solid@2.9.4(@lightningjs/renderer@2.16.0)(@solidjs/router@0.15.3(solid-js@1.9.7))(solid-js@1.9.7)":
+  "@lightningtv/solid@2.10.13(@lightningjs/renderer@2.17.0)(@solidjs/router@0.15.3(solid-js@1.9.7))(solid-js@1.9.7)":
     dependencies:
-      "@lightningtv/core": 2.10.0(@lightningjs/renderer@2.16.0)
+      "@lightningtv/core": 2.12.2(@lightningjs/renderer@2.17.0)
       "@solid-primitives/event-listener": 2.4.3(solid-js@1.9.7)
+      "@solid-primitives/keyed": 1.5.2(solid-js@1.9.7)
+      "@solid-primitives/list": 0.1.2(solid-js@1.9.7)
       "@solid-primitives/mouse": 2.1.4(solid-js@1.9.7)
       "@solid-primitives/scheduled": 1.5.2(solid-js@1.9.7)
       "@solidjs/router": 0.15.3(solid-js@1.9.7)
@@ -6705,6 +6722,14 @@ snapshots:
       "@solid-primitives/utils": 6.3.2(solid-js@1.9.7)
       solid-js: 1.9.7
     optional: true
+
+  "@solid-primitives/keyed@1.5.2(solid-js@1.9.7)":
+    dependencies:
+      solid-js: 1.9.7
+
+  "@solid-primitives/list@0.1.2(solid-js@1.9.7)":
+    dependencies:
+      solid-js: 1.9.7
 
   "@solid-primitives/media@2.3.3(solid-js@1.9.7)":
     dependencies:
