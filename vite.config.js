@@ -7,12 +7,15 @@ import deviceConfigPlugin from "./devices/deviceConfigPlugin.js";
 
 const envDir = "./environments";
 
-export default defineConfig(({ _mode }) => {
+export default defineConfig(({ mode }) => {
   // Get environment variables
   // const env = loadEnv(mode, path.join(__dirname, envDir));
 
   return {
     envDir,
+    define: {
+      __DEV__: mode !== "production",
+    },
     plugins: [
       deviceConfigPlugin(process.env.TARGET_DEVICE),
       hexColorTransform({
