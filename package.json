@@ -1,6 +1,6 @@
 {
   "name": "solid-app",
-  "version": "2.5.0",
+  "version": "3.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -21,9 +21,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@lightningjs/renderer": "2.20.0",
-    "@lightningtv/core": "^2.14.0",
-    "@lightningtv/solid": "^2.12.5",
+    "@lightningjs/renderer": "3.0.0-beta20",
+    "@lightningtv/solid": "^3.0.0",
     "@lightningtv/vite-hex-transform": "^1.1.0",
     "@solid-primitives/i18n": "^2.2.1",
     "@solidjs/router": "^0.15.4",

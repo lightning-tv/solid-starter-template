@@ -17,7 +17,7 @@ export const config = {
     debug: false,
     focusDebug: false,
     fontSettings: { fontFamily: "Roboto", color: 0xffffffff, fontSize: 40 },
-    animationSettings: { easing: "ease-in-out", duration: 250 },
+    animationSettings: { easing: "ease-out", duration: 300 },
     rendererOptions: {
       appHeight: 1080,
       appWidth: 1920,
@@ -30,8 +30,15 @@ export const config = {
       deviceLogicalPixelRatio: 1,
       devicePhysicalPixelRatio: 1,
       // Increase to preload images coming from offscreen
-      boundsMargin: 20,
+      boundsMargin: 200,
       createImageBitmapSupport: "auto",
+      textureMemory: {
+        criticalThreshold: 200e6,
+        targetThresholdLevel: 0.8,
+      },
+      enableClear: false,
+      enableAlphaChannel: true,
+      textureEnableAlphaFormats: ["png"],
     },
   },
   keys: {

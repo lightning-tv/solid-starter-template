@@ -8,10 +8,29 @@ import NotFound from "./pages/NotFound";
 import fonts from "./fonts";
 import { merge } from "lodash-es";
 import { config } from "#devices/common";
+import {
+  Rounded,
+  RoundedWithShadow,
+  RoundedWithBorderAndShadow,
+  RadialGradient,
+  LinearGradient,
+  HolePunch,
+} from "@lightningjs/renderer/webgl/shaders";
+import { RoundedWithBorder } from "@lightningtv/solid/shaders";
 
 merge(LightningConfig, config.lightning);
 
-const { render } = createRenderer();
+const { render, renderer } = createRenderer();
+
+const shManager = renderer.stage.shManager;
+shManager.registerShaderType("rounded", Rounded);
+shManager.registerShaderType("roundedWithBorder", RoundedWithBorder);
+shManager.registerShaderType("roundedWithShadow", RoundedWithShadow);
+shManager.registerShaderType("roundedWithBorderWithShadow", RoundedWithBorderAndShadow);
+shManager.registerShaderType("radialGradient", RadialGradient);
+shManager.registerShaderType("linearGradient", LinearGradient);
+shManager.registerShaderType("holePunch", HolePunch);
+
 loadFonts(fonts);
 render(() => {
   useFocusManager(config.keys, config.keyHoldOptions);
