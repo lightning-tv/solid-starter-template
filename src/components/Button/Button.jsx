@@ -10,18 +10,13 @@ const styles = {
     height: 136,
     color: "#FFF",
     alpha: 0.9,
-    effects: {
-      radius: { radius: 8 },
-      border: { width: 5, color: "#000" },
-    },
+    borderRadius: 8,
+    border: { width: 1, color: "#000" },
     scale: 1,
     focus: {
       color: 0x58807dff,
       scale: 1.2,
-      effects: {
-        radius: { radius: 8 },
-        border: { width: 5, color: 0xff0000ff },
-      },
+      border: { width: 1, color: 0xff0000ff },
       alpha: 1,
     },
     active: {

@@ -4,6 +4,15 @@ import { Inspector } from "@lightningjs/renderer/inspector";
 import fonts from "../src/fonts";
 import { useFocusManager } from "@lightningtv/solid/primitives";
 import { createSignal, Show } from "solid-js";
+import {
+  Rounded,
+  RoundedWithShadow,
+  RoundedWithBorderAndShadow,
+  RadialGradient,
+  LinearGradient,
+  HolePunch,
+} from "@lightningjs/renderer/webgl/shaders";
+import { RoundedWithBorder } from "@lightningtv/solid/shaders";
 
 Config.rendererOptions = {
   appWidth: 1920,
@@ -48,13 +57,29 @@ const preview = {
 
       if (startRenderer) {
         startRenderer = false;
-        const { render } = createRenderer(undefined, solidRoot);
+        const { render, renderer } = createRenderer(undefined, solidRoot);
+        const shManager = renderer.stage.shManager;
+        shManager.registerShaderType("rounded", Rounded);
+        shManager.registerShaderType("roundedWithBorder", RoundedWithBorder);
+        shManager.registerShaderType("roundedWithShadow", RoundedWithShadow);
+        shManager.registerShaderType("roundedWithBorderWithShadow", RoundedWithBorderAndShadow);
+        shManager.registerShaderType("radialGradient", RadialGradient);
+        shManager.registerShaderType("linearGradient", LinearGradient);
+        shManager.registerShaderType("holePunch", HolePunch);
         loadFonts(fonts);
 
         render(() => {
           useFocusManager();
           [toRender, setToRender] = createSignal(Story);
-          return <Show when={toRender()}>{toRender()}</Show>;
+          return (
+            <Show when={toRender()}>
+              {
+                <view x={20} y={20}>
+                  {toRender()}
+                </view>
+              }
+            </Show>
+          );
         });
       }
 
