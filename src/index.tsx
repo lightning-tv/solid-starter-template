@@ -11,12 +11,12 @@ import { config } from "#devices/common";
 import {
   Rounded,
   RoundedWithShadow,
+  RoundedWithBorder,
   RoundedWithBorderAndShadow,
   RadialGradient,
   LinearGradient,
   HolePunch,
 } from "@lightningjs/renderer/webgl/shaders";
-import { RoundedWithBorder } from "@lightningtv/solid/shaders";
 
 merge(LightningConfig, config.lightning);
 
