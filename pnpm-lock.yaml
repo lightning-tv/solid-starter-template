@@ -11,8 +11,8 @@ importers:
         specifier: 3.0.0-beta22
         version: 3.0.0-beta22
       "@lightningtv/solid":
-        specifier: ^3.1.1
-        version: 3.1.1(@lightningjs/renderer@3.0.0-beta22)(@solidjs/router@0.15.4(solid-js@1.9.11))(solid-js@1.9.11)
+        specifier: ^3.1.4
+        version: 3.1.4(@lightningjs/renderer@3.0.0-beta22)(@solidjs/router@0.15.4(solid-js@1.9.11))(solid-js@1.9.11)
       "@lightningtv/vite-hex-transform":
         specifier: ^1.1.0
         version: 1.1.0(terser@5.46.0)
@@ -1581,10 +1581,10 @@ packages:
       }
     engines: { node: ">= 18.0.0", npm: ">= 10.0.0", pnpm: ">= 10.17.0" }
 
-  "@lightningtv/solid@3.1.1":
+  "@lightningtv/solid@3.1.4":
     resolution:
       {
-        integrity: sha512-dQI+L3Wm+CGuSs+bdQ2IZsqi3A0sV3NrJsMstVnW1txAFEfP7PpEkFF0EWKskBX9nk3bRNsHWTRpPoDjoF4YMQ==,
+        integrity: sha512-MF1kITFzU1RWkcwsJTDgdysh5AbEpPwFOd5WXupbQpNtyGjS68h5p+UOqfeoaoWXlKeFqXLWYM2K2+QV6+ARHA==,
       }
     peerDependencies:
       "@lightningjs/renderer": ^3.0.0-beta21
@@ -4632,7 +4632,6 @@ packages:
       {
         integrity: sha512-9wrYXUWcUp/2KkeBvBRRkHCmNLW2+UjNHLXX9vOuaEltNyxQ4leE07i3gbVAqDD0ru6RTY0UfP/GZZSBql/F7g==,
       }
-    engines: { node: ">=18" }
 
   shebang-command@2.0.0:
     resolution:
@@ -6472,7 +6471,7 @@ snapshots:
 
   "@lightningjs/renderer@3.0.0-beta22": {}
 
-  "@lightningtv/solid@3.1.1(@lightningjs/renderer@3.0.0-beta22)(@solidjs/router@0.15.4(solid-js@1.9.11))(solid-js@1.9.11)":
+  "@lightningtv/solid@3.1.4(@lightningjs/renderer@3.0.0-beta22)(@solidjs/router@0.15.4(solid-js@1.9.11))(solid-js@1.9.11)":
     dependencies:
       "@lightningjs/renderer": 3.0.0-beta22
       "@solid-primitives/event-listener": 2.4.3(solid-js@1.9.11)
